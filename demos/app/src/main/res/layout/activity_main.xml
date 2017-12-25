@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.weicao.exercise.MainActivity"
+    android:background="@drawable/restaurant"
+    >
+
+    <TextView
+        android:id="@+id/titles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stock Market Search"
+        android:textSize="30dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        />
+
+    <AutoCompleteTextView
+        android:id="@+id/stockInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/titles"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp"
+        android:completionThreshold="1"
+        android:dropDownHorizontalOffset="500dp"/>
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn2"
+        android:layout_alignBottom="@+id/btn2"
+        android:layout_alignStart="@+id/stockInput"
+        android:layout_marginStart="20dp"
+        android:background="@null"
+        android:text="Get Quote"
+        android:textSize="25sp"
+        android:textAllCaps="false"
+        android:textColor="#0000ff"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/stockInput"
+        android:layout_below="@+id/stockInput"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:text="Clear"
+        android:textSize="25sp"
+        android:textAllCaps="false"
+        android:textColor="#0000ff"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favorites"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:layout_below="@+id/btn1"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AutoRefresh"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:layout_below="@+id/btn2"
+        android:layout_toRightOf="@+id/favorite"
+        android:layout_alignBaseline="@+id/favorite"
+        android:layout_marginLeft="80sp"
+        />
+
+    <Switch
+        android:id="@+id/swt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/auto"
+        android:layout_alignBaseline="@+id/auto"/>
+
+    <ImageButton
+        android:id="@+id/refre"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/refreshbutton"
+        android:background="#0000"
+        android:scaleType="fitCenter"
+        android:layout_toRightOf="@id/swt"
+        android:layout_below="@id/btn2"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <Spinner
+        android:id="@+id/spSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favorite"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="60dp"></Spinner>
+
+    <Spinner
+        android:id="@+id/spOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favorite"
+        android:layout_marginTop="20dp"
+
+        android:layout_toRightOf="@id/spSort"></Spinner>
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/face"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:indeterminateTint="#000"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="170dp"
+        android:indeterminateTintMode="src_in" />
+    <ListView
+        android:id="@+id/mylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spSort"
+        ></ListView>
+
+</RelativeLayout>
